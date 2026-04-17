@@ -1,4 +1,17 @@
-"""PII detection governance skill.
+"""
+Module: skill.py
+
+Purpose:
+Implements dynamic governance skills and assessments defined in skill.py.
+
+Responsibilities:
+- Handles specific `skill.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+PII detection governance skill.
 
 Scans column names for patterns that indicate Personally Identifiable
 Information and assigns a risk level.

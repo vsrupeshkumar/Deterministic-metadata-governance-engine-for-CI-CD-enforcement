@@ -1,4 +1,17 @@
-"""On-demand skill registry — discovers and loads governance skills.
+"""
+Module: skills_loader.py
+
+Purpose:
+Implements dynamic governance skills and assessments defined in skills_loader.py.
+
+Responsibilities:
+- Handles specific `skills_loader.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+On-demand skill registry — discovers and loads governance skills.
 
 Scans ``sentinel/skills/`` subdirectories for ``skill.py`` modules,
 imports them, and registers any class inheriting from

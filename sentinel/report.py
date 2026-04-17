@@ -1,4 +1,17 @@
-"""PR comment report generator for Sentinel governance results.
+"""
+Module: report.py
+
+Purpose:
+Orchestrates core governance capabilities via CLI and reporting logic for report.py.
+
+Responsibilities:
+- Handles specific `report.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+PR comment report generator for Sentinel governance results.
 
 Generates a deterministic Markdown string (no timestamps in the body)
 suitable for posting as a GitHub PR comment.

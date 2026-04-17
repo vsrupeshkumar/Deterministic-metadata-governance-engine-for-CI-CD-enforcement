@@ -1,4 +1,17 @@
-"""Health-check endpoint."""
+"""
+Module: health.py
+
+Purpose:
+Provides API endpoints and server routes for health.py within the Hephaestus web service layer.
+
+Responsibilities:
+- Handles specific `health.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Health-check endpoint."""
 
 from __future__ import annotations
 

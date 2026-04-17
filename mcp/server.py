@@ -1,4 +1,17 @@
-"""FastMCP server — universal translator for Hephaestus tools.
+"""
+Module: server.py
+
+Purpose:
+Interacts with Machine Control Protocol tooling surfaces through server.py.
+
+Responsibilities:
+- Handles specific `server.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+FastMCP server — universal translator for Hephaestus tools.
 
 This module registers all tool functions from ``mcp/tools/`` and exposes
 them via the Model Context Protocol.  Tool implementations live in their

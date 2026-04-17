@@ -1,3 +1,4 @@
+# Description: Defines data contracts and schemas required for CI/CD governance rules in odcs_3_1_schema.yaml.
 # ODCS 3.1 Contract Schema
 #
 # This defines the required fields for a valid data contract

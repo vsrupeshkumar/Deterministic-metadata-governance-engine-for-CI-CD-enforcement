@@ -1,3 +1,17 @@
+"""
+Module: lineage_loader.py
+
+Purpose:
+Parses and organizes raw catalog data payloads for the lineage_loader.py component.
+
+Responsibilities:
+- Handles specific `lineage_loader.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+"""
+
 import json
 from pathlib import Path
 from sentinel.core.blast_radius import LineageGraph

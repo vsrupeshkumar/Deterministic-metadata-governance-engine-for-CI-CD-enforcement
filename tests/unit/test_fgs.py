@@ -1,3 +1,17 @@
+"""
+Module: test_fgs.py
+
+Purpose:
+Validates and verifies the functional correctness of the test_fgs.py components.
+
+Responsibilities:
+- Handles specific `test_fgs.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+"""
+
 from sentinel.core.fgs import calculate_fgs, ColumnMetadata
 from config.settings import settings
 

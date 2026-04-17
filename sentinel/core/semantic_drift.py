@@ -1,4 +1,17 @@
-"""Semantic drift detection between dbt descriptions and OpenMetadata catalog.
+"""
+Module: semantic_drift.py
+
+Purpose:
+Contains mission-critical validation algorithms for semantic_drift.py within the Sentinel evaluation loop.
+
+Responsibilities:
+- Handles specific `semantic_drift.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Semantic drift detection between dbt descriptions and OpenMetadata catalog.
 
 Uses sentence-transformer embeddings and numpy cosine similarity to
 quantify how far a code-side description has drifted from its catalog

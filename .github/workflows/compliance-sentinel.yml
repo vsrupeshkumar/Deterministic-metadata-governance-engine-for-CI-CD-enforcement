@@ -1,3 +1,4 @@
+# Description: Automates continuous integration and Sentinel checks natively via compliance-sentinel.yml.
 name: Compliance Sentinel
 
 on:

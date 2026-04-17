@@ -1,4 +1,17 @@
-"""Reverse patch — propagate UI edits back to OpenMetadata.
+"""
+Module: reverse_patch.py
+
+Purpose:
+Manages reverse sync operations and artifact patching natively inside reverse_patch.py.
+
+Responsibilities:
+- Handles specific `reverse_patch.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Reverse patch — propagate UI edits back to OpenMetadata.
 
 Thin wrapper around :func:`mcp.tools.entity_tools.patch_entity` that
 adds structured logging for auditability.

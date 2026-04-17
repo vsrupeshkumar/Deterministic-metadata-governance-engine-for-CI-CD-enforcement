@@ -1,4 +1,17 @@
-"""Forge drill: schema evolution scenario.
+"""
+Module: drill_schema_evolution.py
+
+Purpose:
+Validates and verifies the functional correctness of the drill_schema_evolution.py components.
+
+Responsibilities:
+- Handles specific `drill_schema_evolution.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Forge drill: schema evolution scenario.
 
 Simulates a table gaining new columns across a version bump and
 validates that the FGS and change-magnitude formulas react correctly.

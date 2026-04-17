@@ -1,3 +1,17 @@
+"""
+Module: test_diff_engine.py
+
+Purpose:
+Validates and verifies the functional correctness of the test_diff_engine.py components.
+
+Responsibilities:
+- Handles specific `test_diff_engine.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+"""
+
 import pytest
 from sentinel.core.diff_engine import calculate_change_magnitude, SchemaChange, VolumeChange
 

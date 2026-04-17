@@ -1,4 +1,17 @@
-"""MCP tools for schema and data diff operations.
+"""
+Module: diff_tools.py
+
+Purpose:
+Interacts with Machine Control Protocol tooling surfaces through diff_tools.py.
+
+Responsibilities:
+- Handles specific `diff_tools.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+MCP tools for schema and data diff operations.
 
 Provides ``get_data_diff`` (raw diff from OpenMetadata data-quality API)
 and ``compare_schemas`` (column-level diff between two entity snapshots).

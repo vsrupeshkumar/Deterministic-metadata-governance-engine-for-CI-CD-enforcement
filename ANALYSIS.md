@@ -1,4 +1,12 @@
-# Project Configuration Analysis
+# Analysis
+
+## Purpose
+Root-level structural file managing metadata or entrypoints for ANALYSIS.md
+
+## Scope
+Relates to the `Root Directory` subsystem.
+
+
 
 This document provides a technical overview of the Docker and YAML configurations used in the Hephaestus governance engine.
 

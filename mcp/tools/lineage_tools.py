@@ -1,4 +1,17 @@
-"""MCP tools for OpenMetadata lineage graph traversal.
+"""
+Module: lineage_tools.py
+
+Purpose:
+Interacts with Machine Control Protocol tooling surfaces through lineage_tools.py.
+
+Responsibilities:
+- Handles specific `lineage_tools.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+MCP tools for OpenMetadata lineage graph traversal.
 
 Provides ``get_entity_lineage`` (raw graph fetch) and
 ``get_downstream_nodes`` (extracted downstream FQN list).

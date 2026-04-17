@@ -1,4 +1,12 @@
-# Hephaestus
+# Readme
+
+## Purpose
+Root-level structural file managing metadata or entrypoints for README.md
+
+## Scope
+Relates to the `Root Directory` subsystem.
+
+
 
 **Deterministic metadata governance engine for CI/CD enforcement.**
 

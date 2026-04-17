@@ -1,4 +1,17 @@
-"""Unit tests for semantic drift detection.
+"""
+Module: test_semantic_drift.py
+
+Purpose:
+Validates and verifies the functional correctness of the test_semantic_drift.py components.
+
+Responsibilities:
+- Handles specific `test_semantic_drift.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Unit tests for semantic drift detection.
 
 NOTE: These tests require the sentence-transformers model to be
 downloadable.  If running in CI without network, mock the model.

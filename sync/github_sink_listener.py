@@ -1,4 +1,17 @@
-"""GitHub sink listener — watches for OpenMetadata catalog sink commits.
+"""
+Module: github_sink_listener.py
+
+Purpose:
+Manages reverse sync operations and artifact patching natively inside github_sink_listener.py.
+
+Responsibilities:
+- Handles specific `github_sink_listener.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+GitHub sink listener — watches for OpenMetadata catalog sink commits.
 
 Detects commits whose message starts with ``chore(openmetadata-sink):``
 and applies the entity updates to local dbt schema files.  Idempotent —

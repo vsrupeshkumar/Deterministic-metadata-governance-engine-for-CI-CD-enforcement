@@ -1,3 +1,4 @@
+# Description: Defines data contracts and schemas required for CI/CD governance rules in example_contract.yaml.
 # Example ODCS 3.1 Data Contract
 # Dataset: orders — transactional order records for the e-commerce platform.
 

@@ -1,4 +1,12 @@
-# PII Detection Skill
+# Skill
+
+## Purpose
+Implements dynamic governance skills and assessments defined in SKILL.md.
+
+## Scope
+Relates to the `sentinel` subsystem.
+
+
 
 ## Purpose
 Scans column names for patterns that indicate Personally Identifiable

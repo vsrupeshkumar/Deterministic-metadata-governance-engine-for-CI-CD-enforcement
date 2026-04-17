@@ -1,4 +1,12 @@
-# Data Contract Validation Skill
+# Skill
+
+## Purpose
+Implements dynamic governance skills and assessments defined in SKILL.md.
+
+## Scope
+Relates to the `sentinel` subsystem.
+
+
 
 ## Purpose
 Validates ODCS 3.1 data contract YAML files for required field presence

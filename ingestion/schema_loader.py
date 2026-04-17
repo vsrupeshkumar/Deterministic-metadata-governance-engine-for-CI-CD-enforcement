@@ -1,3 +1,17 @@
+"""
+Module: schema_loader.py
+
+Purpose:
+Parses and organizes raw catalog data payloads for the schema_loader.py component.
+
+Responsibilities:
+- Handles specific `schema_loader.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+"""
+
 import json
 from pathlib import Path
 from sentinel.core.diff_engine import SchemaChange

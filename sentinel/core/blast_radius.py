@@ -1,4 +1,17 @@
-"""Blast-radius calculation from OpenMetadata lineage graphs.
+"""
+Module: blast_radius.py
+
+Purpose:
+Contains mission-critical validation algorithms for blast_radius.py within the Sentinel evaluation loop.
+
+Responsibilities:
+- Handles specific `blast_radius.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Blast-radius calculation from OpenMetadata lineage graphs.
 
 Performs BFS over the lineage graph JSON response to count all unique
 downstream dependent nodes (tables, dashboards, ML models, etc.).

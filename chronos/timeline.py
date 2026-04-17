@@ -1,4 +1,17 @@
-"""Timeline builder for the Chronos dashboard.
+"""
+Module: timeline.py
+
+Purpose:
+Manages Temporal-style workflows and snapshot states for timeline.py chronological syncs.
+
+Responsibilities:
+- Handles specific `timeline.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Timeline builder for the Chronos dashboard.
 
 Pure function — no I/O. Takes a list of snapshot dicts and returns them
 sorted and enriched with human-readable age strings.

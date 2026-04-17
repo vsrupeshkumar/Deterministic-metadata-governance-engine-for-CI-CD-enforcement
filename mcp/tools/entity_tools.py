@@ -1,4 +1,17 @@
-"""MCP tools for OpenMetadata entity CRUD operations.
+"""
+Module: entity_tools.py
+
+Purpose:
+Interacts with Machine Control Protocol tooling surfaces through entity_tools.py.
+
+Responsibilities:
+- Handles specific `entity_tools.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+MCP tools for OpenMetadata entity CRUD operations.
 
 Provides ``get_entity``, ``patch_entity``, and ``list_entities`` — thin
 async wrappers around the OpenMetadata REST API that handle authentication,

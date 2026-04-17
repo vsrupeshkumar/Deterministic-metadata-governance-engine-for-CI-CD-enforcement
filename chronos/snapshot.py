@@ -1,4 +1,17 @@
-"""State snapshot capture for the entire metadata estate.
+"""
+Module: snapshot.py
+
+Purpose:
+Manages Temporal-style workflows and snapshot states for snapshot.py chronological syncs.
+
+Responsibilities:
+- Handles specific `snapshot.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+State snapshot capture for the entire metadata estate.
 
 Fetches all tables, dashboards, and ML models from OpenMetadata and
 packages them into a timestamped snapshot dict.  The snapshot is returned

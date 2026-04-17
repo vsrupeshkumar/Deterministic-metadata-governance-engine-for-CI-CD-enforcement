@@ -1,4 +1,17 @@
-"""Timeline and snapshot endpoints."""
+"""
+Module: timeline.py
+
+Purpose:
+Provides API endpoints and server routes for timeline.py within the Hephaestus web service layer.
+
+Responsibilities:
+- Handles specific `timeline.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Timeline and snapshot endpoints."""
 
 from __future__ import annotations
 

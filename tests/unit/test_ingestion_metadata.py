@@ -1,3 +1,17 @@
+"""
+Module: test_ingestion_metadata.py
+
+Purpose:
+Validates and verifies the functional correctness of the test_ingestion_metadata.py components.
+
+Responsibilities:
+- Handles specific `test_ingestion_metadata.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+"""
+
 import pytest
 import json
 from pathlib import Path

@@ -1,4 +1,17 @@
-"""Change-magnitude engine for schema and volume deltas.
+"""
+Module: diff_engine.py
+
+Purpose:
+Contains mission-critical validation algorithms for diff_engine.py within the Sentinel evaluation loop.
+
+Responsibilities:
+- Handles specific `diff_engine.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Change-magnitude engine for schema and volume deltas.
 
 Pure computation module — no I/O.
 

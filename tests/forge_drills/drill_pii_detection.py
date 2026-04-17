@@ -1,4 +1,17 @@
-"""Forge drill: PII detection scenario.
+"""
+Module: drill_pii_detection.py
+
+Purpose:
+Validates and verifies the functional correctness of the drill_pii_detection.py components.
+
+Responsibilities:
+- Handles specific `drill_pii_detection.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Forge drill: PII detection scenario.
 
 Validates that the PII detection skill correctly identifies sensitive
 column patterns and assigns appropriate risk levels.

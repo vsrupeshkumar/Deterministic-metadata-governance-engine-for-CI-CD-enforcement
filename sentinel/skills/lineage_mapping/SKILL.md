@@ -1,4 +1,12 @@
-# Lineage Mapping Skill
+# Skill
+
+## Purpose
+Implements dynamic governance skills and assessments defined in SKILL.md.
+
+## Scope
+Relates to the `sentinel` subsystem.
+
+
 
 ## Purpose
 Extracts a structured summary of downstream dependencies from the

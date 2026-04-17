@@ -1,4 +1,17 @@
-"""Forge Governance Score (FGS) — deterministic compliance scoring.
+"""
+Module: fgs.py
+
+Purpose:
+Contains mission-critical validation algorithms for fgs.py within the Sentinel evaluation loop.
+
+Responsibilities:
+- Handles specific `fgs.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Forge Governance Score (FGS) — deterministic compliance scoring.
 
 Pure computation module.  No I/O, no network calls — only math.
 

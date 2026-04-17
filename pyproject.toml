@@ -1,3 +1,4 @@
+# Purpose: Root-level structural file managing metadata or entrypoints for pyproject.toml
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"

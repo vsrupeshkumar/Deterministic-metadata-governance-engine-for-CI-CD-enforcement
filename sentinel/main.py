@@ -1,4 +1,17 @@
-"""Sentinel CLI — entry point for the Hephaestus governance engine.
+"""
+Module: main.py
+
+Purpose:
+Orchestrates core governance capabilities via CLI and reporting logic for main.py.
+
+Responsibilities:
+- Handles specific `main.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Sentinel CLI — entry point for the Hephaestus governance engine.
 
 Invoked by the GitHub Action workflow or directly via::
 

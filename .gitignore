@@ -1,3 +1,4 @@
+# Purpose: Root-level structural file managing metadata or entrypoints for .gitignore
 # Python
 __pycache__/
 *.py[cod]

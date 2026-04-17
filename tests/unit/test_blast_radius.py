@@ -1,3 +1,17 @@
+"""
+Module: test_blast_radius.py
+
+Purpose:
+Validates and verifies the functional correctness of the test_blast_radius.py components.
+
+Responsibilities:
+- Handles specific `test_blast_radius.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+"""
+
 from sentinel.core.blast_radius import calculate_blast_radius, LineageGraph
 
 def test_blast_radius_single_chain():

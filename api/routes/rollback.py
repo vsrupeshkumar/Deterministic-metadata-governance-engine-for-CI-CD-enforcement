@@ -1,4 +1,17 @@
-"""Rollback endpoint."""
+"""
+Module: rollback.py
+
+Purpose:
+Provides API endpoints and server routes for rollback.py within the Hephaestus web service layer.
+
+Responsibilities:
+- Handles specific `rollback.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Rollback endpoint."""
 
 from __future__ import annotations
 

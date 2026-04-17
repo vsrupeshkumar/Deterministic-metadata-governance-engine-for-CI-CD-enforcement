@@ -1,4 +1,17 @@
-"""Lineage mapping governance skill.
+"""
+Module: skill.py
+
+Purpose:
+Implements dynamic governance skills and assessments defined in skill.py.
+
+Responsibilities:
+- Handles specific `skill.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Lineage mapping governance skill.
 
 Extracts a structured downstream-dependency summary from the
 OpenMetadata lineage graph.

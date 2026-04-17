@@ -1,4 +1,17 @@
-"""Abstract base class for all Hephaestus governance skills.
+"""
+Module: base_skill.py
+
+Purpose:
+Implements dynamic governance skills and assessments defined in base_skill.py.
+
+Responsibilities:
+- Handles specific `base_skill.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Abstract base class for all Hephaestus governance skills.
 
 Every skill must inherit from :class:`BaseSkill` and implement
 :meth:`execute` and optionally override :meth:`is_applicable`.

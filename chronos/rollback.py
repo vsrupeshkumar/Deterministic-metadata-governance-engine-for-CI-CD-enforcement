@@ -1,4 +1,17 @@
-"""Rollback engine — restore metadata estate to a prior snapshot.
+"""
+Module: rollback.py
+
+Purpose:
+Manages Temporal-style workflows and snapshot states for rollback.py chronological syncs.
+
+Responsibilities:
+- Handles specific `rollback.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Rollback engine — restore metadata estate to a prior snapshot.
 
 Two-stage rollback:
 1. **API stage**: Patch each entity back to its snapshotted state via

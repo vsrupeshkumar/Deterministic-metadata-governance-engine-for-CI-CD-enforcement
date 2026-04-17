@@ -1,4 +1,17 @@
-"""Hephaestus settings — single source of truth for all configuration.
+"""
+Module: settings.py
+
+Purpose:
+Maintains base configuration and environment settings for settings.py.
+
+Responsibilities:
+- Handles specific `settings.py` domain logic
+- Integrates seamlessly with sibling modules
+- Adheres strictly to Hephaestus governance constraints
+
+Part of: Hephaestus Governance Engine
+
+Hephaestus settings — single source of truth for all configuration.
 
 All values are loaded from environment variables (or a .env file).
 No module in the project should import ``os.environ`` directly;
