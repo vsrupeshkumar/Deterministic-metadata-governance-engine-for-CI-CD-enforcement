@@ -50,3 +50,4 @@ optional_fields:
   - field: quality_tests
     type: list
     description: "List of data quality test definitions."
+

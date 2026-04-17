@@ -94,3 +94,4 @@ def calculate_change_magnitude(
         volume_contribution=round(volume_contribution, 6),
         summary=summary,
     )
+

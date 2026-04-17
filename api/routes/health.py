@@ -19,3 +19,4 @@ async def health_check() -> dict[str, str]:
         "version": "0.1.0",
         "service": "hephaestus-api",
     }
+

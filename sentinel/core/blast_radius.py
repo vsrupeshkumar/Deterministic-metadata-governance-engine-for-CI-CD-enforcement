@@ -78,3 +78,4 @@ def _extract_id(entity_ref: Any) -> str:
     if isinstance(entity_ref, str):
         return entity_ref
     return ""
+

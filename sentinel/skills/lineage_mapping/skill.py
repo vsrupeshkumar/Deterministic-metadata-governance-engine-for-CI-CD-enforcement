@@ -86,3 +86,4 @@ class LineageMappingSkill(BaseSkill):
             "downstream_count": len(downstream_nodes),
             "downstream_nodes": downstream_nodes,
         }
+

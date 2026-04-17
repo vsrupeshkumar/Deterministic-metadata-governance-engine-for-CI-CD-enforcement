@@ -68,3 +68,4 @@ async def get_snapshot(index: int, request: Request) -> dict[str, Any]:
             detail=f"Snapshot index {index} not found (have {len(snapshots)} snapshots).",
         )
     return snapshots[index]
+

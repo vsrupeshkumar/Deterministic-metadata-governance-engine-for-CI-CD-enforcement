@@ -18,3 +18,4 @@ def test_blast_radius_empty():
 def test_blast_radius_no_include_self():
     graph = LineageGraph(edges={"A": {"B"}, "B": {"A"}})
     assert calculate_blast_radius(graph) == 2
+

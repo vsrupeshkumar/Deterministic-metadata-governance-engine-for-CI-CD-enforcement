@@ -122,3 +122,4 @@ async def compare_schemas(
         "removed_columns": removed,
         "modified_columns": modified,
     }
+

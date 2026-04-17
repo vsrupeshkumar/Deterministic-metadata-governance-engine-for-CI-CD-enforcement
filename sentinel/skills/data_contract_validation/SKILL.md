@@ -31,3 +31,4 @@ or
 - ``version`` (string, required)
 - ``owner`` (string, required)
 - ``columns`` (list, required) — each entry must have ``name`` and ``type``
+

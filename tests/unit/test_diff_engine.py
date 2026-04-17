@@ -34,3 +34,4 @@ def test_calculate_change_magnitude_clamped():
     assert res.structural_delta == 1.0
     assert res.volume_delta == 1.0
     assert res.magnitude == 1.0
+

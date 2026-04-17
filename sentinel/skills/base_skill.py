@@ -55,3 +55,4 @@ class BaseSkill(ABC):
             ``True`` if the skill should execute.
         """
         return True
+

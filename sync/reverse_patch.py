@@ -49,3 +49,4 @@ async def reverse_patch(
         result.get("version", "?"),
     )
     return result
+

@@ -101,3 +101,4 @@ class DataContractValidationSkill(BaseSkill):
             "valid": len(violations) == 0,
             "violations": violations,
         }
+

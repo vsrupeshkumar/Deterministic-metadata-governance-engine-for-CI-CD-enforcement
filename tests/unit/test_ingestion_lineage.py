@@ -24,3 +24,4 @@ def test_load_lineage_cycles(tmp_path: Path):
 def test_load_lineage_missing_file(tmp_path: Path):
     with pytest.raises(FileNotFoundError):
         load_lineage(tmp_path / "missing.json")
+

@@ -35,3 +35,4 @@ from mcp.tools.diff_tools import (  # noqa: F401, E402
 
 if __name__ == "__main__":
     mcp_server.run()
+

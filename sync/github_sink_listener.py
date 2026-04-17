@@ -152,3 +152,4 @@ class GitHubSinkListener:
             yaml.safe_dump(existing, fh, default_flow_style=False, sort_keys=False)
 
         logger.debug("Merged updates into %s.", schema_path)
+

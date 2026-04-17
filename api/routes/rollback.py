@@ -54,3 +54,4 @@ async def trigger_rollback(
         commit_sha=body.commit_sha,
     )
     return result
+

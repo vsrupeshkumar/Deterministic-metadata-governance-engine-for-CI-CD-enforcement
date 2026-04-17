@@ -50,3 +50,4 @@ jobs:
           LAMBDA_DECAY: ${{ secrets.LAMBDA_DECAY }}
           EMBEDDING_MODEL_NAME: ${{ secrets.EMBEDDING_MODEL_NAME }}
         run: hephaestus-sentinel run-sentinel
+

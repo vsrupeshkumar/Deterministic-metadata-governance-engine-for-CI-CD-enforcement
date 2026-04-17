@@ -133,3 +133,4 @@ def _compact(data: Any, max_len: int = 120) -> str:
     if len(text) > max_len:
         return text[: max_len - 3] + "..."
     return text
+

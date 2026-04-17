@@ -68,3 +68,4 @@ def _humanize_delta(seconds: float) -> str:
     days = int(hours // 24)
     unit = "day" if days == 1 else "days"
     return f"{days} {unit} ago"
+

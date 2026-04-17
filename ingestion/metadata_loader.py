@@ -54,3 +54,4 @@ def load_metadata(path: Path) -> dict[str, list[IngestedColumn]]:
         result[table_fqn] = columns
         
     return result
+

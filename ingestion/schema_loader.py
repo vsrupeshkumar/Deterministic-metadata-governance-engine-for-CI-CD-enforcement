@@ -36,3 +36,4 @@ def load_schema_changes(path: Path) -> dict[str, SchemaChange]:
         )
         
     return result
+

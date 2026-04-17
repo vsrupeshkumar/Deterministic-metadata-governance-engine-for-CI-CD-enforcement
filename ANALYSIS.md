@@ -30,3 +30,4 @@ The project uses Docker to provide a standardized, reproducible environment for 
 
 ## 3. Environment Lifecycle
 Configuration is strictly managed via `.env` files and Pydantic settings. The `docker/.env.example` provides a template for all required integrations (OpenMetadata tokens, GitHub credentials, Qdrant settings), ensuring that zero hardcoded secrets exist in the codebase.
+

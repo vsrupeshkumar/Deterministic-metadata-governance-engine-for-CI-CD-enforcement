@@ -136,3 +136,4 @@ def calculate_fgs(
         is_blocked=is_blocked,
         explanation=explanation,
     )
+

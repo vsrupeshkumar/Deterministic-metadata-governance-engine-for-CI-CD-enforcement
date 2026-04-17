@@ -19,3 +19,4 @@ def load_lineage(path: Path) -> LineageGraph:
         edges[str(node)] = set(str(d) for d in downstream)
         
     return LineageGraph(edges=edges)
+

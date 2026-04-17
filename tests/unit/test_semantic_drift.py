@@ -63,3 +63,4 @@ class TestSemanticDriftDetector:
         result = detector.detect("", "")
         assert result.similarity == pytest.approx(0.0)
         assert result.is_drift is True
+

@@ -105,3 +105,4 @@ class SemanticDriftDetector:
             dbt_description=dbt_description,
             catalog_description=catalog_description,
         )
+

@@ -33,3 +33,4 @@ def test_load_metadata_malformed(tmp_path: Path):
     
     with pytest.raises(ValueError, match="must be a list"):
         load_metadata(p)
+

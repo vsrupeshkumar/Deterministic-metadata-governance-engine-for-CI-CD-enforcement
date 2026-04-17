@@ -21,3 +21,4 @@ pattern (email, SSN, phone, date-of-birth, address, credit-card, etc.).
 - **HIGH**: 3 + PII columns, or any SSN / credit-card match.
 - **MEDIUM**: 1–2 PII columns of non-critical types.
 - **LOW**: Patterns matched but only on non-sensitive column names.
+

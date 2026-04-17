@@ -50,3 +50,4 @@ class TestPIIDetectionDrill:
         result = await skill.execute(context)
         assert "first_name" in result["pii_columns"]
         assert result["risk_level"] == "MEDIUM"
+

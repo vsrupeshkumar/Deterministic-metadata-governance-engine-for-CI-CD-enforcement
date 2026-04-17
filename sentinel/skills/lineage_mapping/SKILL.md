@@ -18,3 +18,4 @@ Always applicable (returns ``True`` for any context).
   ]
 }
 ```
+

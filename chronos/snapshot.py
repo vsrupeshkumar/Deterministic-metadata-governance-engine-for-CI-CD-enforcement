@@ -50,3 +50,4 @@ async def capture_snapshot(label: str) -> dict[str, Any]:
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "entities": all_entities,
     }
+

@@ -112,3 +112,4 @@ async def list_entities(
         _raise_on_error(response, f"GET /{entity_type}")
         body = response.json()
         return body.get("data", [])
+

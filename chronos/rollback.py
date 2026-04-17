@@ -111,3 +111,4 @@ async def rollback_to_snapshot(
         "patched_count": patched_count,
         "errors": errors,
     }
+

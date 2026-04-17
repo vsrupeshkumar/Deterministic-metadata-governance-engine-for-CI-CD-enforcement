@@ -51,3 +51,4 @@ class TestSchemaEvolutionDrill:
         assert diff.structural_delta == pytest.approx(0.4)
         # Δ = 0.7 * 0.4 + 0.3 * 0 = 0.28
         assert diff.magnitude == pytest.approx(0.28)
+

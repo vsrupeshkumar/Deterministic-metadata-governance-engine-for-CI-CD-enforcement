@@ -26,3 +26,4 @@ def test_calculate_fgs_no_tags():
     cols = [ColumnMetadata(name="test", is_documented=False, criticality_tier=1)]
     res = calculate_fgs(columns=cols, blast_radius=0, lambda_decay=0.1, threshold=0.8)
     assert res.score == 0.0 # because C_i is 0
+

@@ -45,3 +45,4 @@ jobs:
               listener.apply_commit(c)
           print(f'Processed {len(commits)} sink commit(s).')
           "
+
