@@ -117,6 +117,10 @@ export function HephaestusLayout({ children }: { children: React.ReactNode }) {
             <div className="mt-4 flex flex-col gap-4">
                <span className="px-3 text-[11px] font-bold tracking-[0.05em] text-[#64707D]">RESOURCES</span>
                <div className="flex flex-col gap-1">
+                 <Link href="/design-demo" className="flex items-center gap-3 px-3 py-1.5 text-[#8A949E] hover:text-white transition-colors cursor-pointer group">
+                   <Zap className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 text-[#00A3FF]" />
+                   <span className="text-[13px]">Design Demo</span>
+                 </Link>
                  <div className="flex items-center gap-3 px-3 py-1.5 text-[#8A949E] hover:text-white transition-colors cursor-pointer group">
                    <FileText className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100" />
                    <span className="text-[13px]">Docs</span>
