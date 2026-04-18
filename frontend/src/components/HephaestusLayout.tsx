@@ -5,14 +5,16 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { fetchHealth } from '../lib/api';
+import { useGovernanceStore } from '../store/useGovernanceStore';
 import { 
   Search, Settings, Bell, User, Zap, GitBranch, Shield, 
-  TerminalSquare, FileText, LifeBuoy, Activity
+  TerminalSquare, FileText, LifeBuoy, Activity, Play, RefreshCw
 } from 'lucide-react';
 
 export function HephaestusLayout({ children }: { children: React.ReactNode }) {
   const [healthStatus, setHealthStatus] = useState<any>(null);
   const pathname = usePathname();
+  const { loading, runEvaluation } = useGovernanceStore();
 
   useEffect(() => {
     const checkHealth = async () => {
@@ -47,17 +49,27 @@ export function HephaestusLayout({ children }: { children: React.ReactNode }) {
           </nav>
         </div>
         <div className="flex items-center gap-6">
+          <motion.button 
+             whileHover={{ scale: 1.05 }}
+             whileTap={{ scale: 0.95 }}
+             onClick={() => runEvaluation()}
+             disabled={loading}
+             className="flex items-center gap-2 px-4 py-1.5 bg-[#00E5FF] text-black rounded font-black text-[10px] tracking-widest shadow-[0_0_15px_rgba(0,229,255,0.4)] disabled:opacity-50"
+          >
+            {loading ? <RefreshCw className="w-3.5 h-3.5 animate-spin" /> : <Play className="w-3.5 h-3.5 fill-black" />}
+            ANALYZE NOW
+          </motion.button>
+
           <div className="relative group">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-[#6B7A90]" />
             <input 
               type="text" 
               placeholder="QUERY_ID..." 
-              className="bg-[#111721] border border-[#1d2737] rounded focus:outline-none focus:border-[#00E5FF] text-[10px] py-2 pl-9 pr-4 w-60 transition-all font-mono"
+              className="bg-[#111721] border border-[#1d2737] rounded focus:outline-none focus:border-[#00E5FF] text-[10px] py-2 pl-9 pr-4 w-40 transition-all font-mono"
             />
           </div>
           <div className="flex gap-4 text-[#6B7A90]">
             <Settings className="w-4 h-4 hover:text-[#00E5FF] cursor-pointer transition-colors" />
-            <TerminalSquare className="w-4 h-4 hover:text-[#00E5FF] cursor-pointer transition-colors" />
             <div className="relative">
               <Bell className="w-4 h-4 hover:text-[#00E5FF] cursor-pointer transition-colors" />
               <div className="absolute -top-1 -right-1 w-1.5 h-1.5 bg-[#ff5b5b] rounded-full border border-[#06090e]"></div>
@@ -103,7 +115,7 @@ export function HephaestusLayout({ children }: { children: React.ReactNode }) {
             <motion.button 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="mt-4 neon-btn w-full py-3 rounded text-[10px] font-black tracking-widest text-[#00E5FF] border border-[#00E5FF]/30 shadow-lg shadow-[#00f0ff]/10"
+              className="mt-4 neon-btn w-full py-3 rounded text-[10px] font-black tracking-widest text-[#00E5FF] border border-[#00E5FF]/30 shadow-lg shadow-[#00f0ff]/10 uppercase"
             >
               DEPLOY NEW NODE
             </motion.button>
@@ -147,7 +159,7 @@ export function HephaestusLayout({ children }: { children: React.ReactNode }) {
           </div>
           <div className="flex items-center gap-2 opacity-60">
             <span>TX_ID:</span>
-            <span className="text-white">F8A2-991C-42X0</span>
+            <span className="text-white uppercase transition-all">F8A2-991C-42X0</span>
           </div>
         </div>
         <div className="flex items-center gap-8 pr-12">
