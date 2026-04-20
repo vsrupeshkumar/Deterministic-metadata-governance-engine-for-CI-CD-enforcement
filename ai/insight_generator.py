@@ -51,10 +51,10 @@ def generate_insight(sentinel_input: dict, decision: dict) -> dict:
 
         parsed = json.loads(raw_text.strip())
         return {
-            "summary": str(parsed.get("summary", "Analysis com,
-            "explanation_tree": list(parsed.get("explanation_tree", []))pleted.")),
+            "summary": str(parsed.get("summary", "Analysis completed.")),
             "risks": list(parsed.get("risks", [])),
-            "suggestions": list(parsed.get("suggestions", []))
+            "suggestions": list(parsed.get("suggestions", [])),
+            "explanation_tree": list(parsed.get("explanation_tree", []))
         }
     except json.JSONDecodeError as e:
         logger.error(f"Failed to parse Gemini insight JSON: {e}")

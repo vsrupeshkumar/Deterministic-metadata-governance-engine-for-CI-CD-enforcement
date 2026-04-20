@@ -5,7 +5,7 @@ from pydantic import BaseModel
 import uuid
 from datetime import datetime
 
-from sentinel.core.blast_radius import calculate_blast_radius
+from sentinel.core.blast_radius import calculate_blast_radius, LineageGraph
 from sentinel.core.fgs import ColumnMetadata, calculate_fgs
 from sentinel.core.diff_engine import calculate_change_magnitude, SchemaChange, VolumeChange
 from config import settings
@@ -23,9 +23,13 @@ async def evaluate_sentinel(body: EvaluateRequest, request: Request) -> dict:
     """Evaluate a payload and return Phase 1.2 compliant results."""
     
     # ── Orchestrate Engine Logic ──
-    # Note: Using existing engine calls without modification
-    lineage_graph = body.lineage if isinstance(body.lineage, dict) else {}
-    blast_radius = calculate_blast_radius(lineage_graph)
+    # Convert plain adjacency dict {source: [targets]} to LineageGraph for BFS
+    raw_lineage = body.lineage if isinstance(body.lineage, dict) else {}
+    if raw_lineage and "downstreamEdges" not in raw_lineage:
+        lineage_for_blast = LineageGraph(edges={k: set(v) for k, v in raw_lineage.items() if isinstance(v, list)})
+    else:
+        lineage_for_blast = raw_lineage
+    blast_radius = calculate_blast_radius(lineage_for_blast)
     
     # Simple default entity for real-time demo/ui integration
     fqn = "genesis_entity"
@@ -60,10 +64,13 @@ async def evaluate_sentinel(body: EvaluateRequest, request: Request) -> dict:
     )
 
     # ── Phase 1.2 Response Construction ──
+    # Convert 0–1 internal score to 0–100 display/policy scale
+    fgs_score_pct = round(fgs_result.score * 100, 2)
+
     decision = "APPROVE"
     if fgs_result.is_blocked:
         decision = "REJECT"
-    elif fgs_result.score < 80:
+    elif fgs_result.score < 0.80:
         decision = "REVIEW"
 
     from policy.policy_engine import policy_engine
@@ -73,7 +80,7 @@ async def evaluate_sentinel(body: EvaluateRequest, request: Request) -> dict:
     policy_result = policy_engine.evaluate(
         decision=decision,
         metrics={
-            "fgs_score": fgs_result.score,
+            "fgs_score": fgs_score_pct,
             "blast_radius": blast_radius,
             "change_magnitude": diff_result.magnitude
         }
@@ -109,7 +116,7 @@ async def evaluate_sentinel(body: EvaluateRequest, request: Request) -> dict:
         from intelligence.impact_simulator import simulate_impact
         from intelligence.reasoning_builder import build_reasoning_chain
         
-        metrics = {"fgs_score": fgs_result.score, "blast_radius": blast_radius, "change_magnitude": diff_result.magnitude}
+        metrics = {"fgs_score": fgs_score_pct, "blast_radius": blast_radius, "change_magnitude": diff_result.magnitude}
         suggestions_out = generate_suggestions(final_policy_decision, policy_result["policy_triggered"], metrics)
         simulation_out = simulate_impact(metrics, suggestions_out)
         reasoning_out = build_reasoning_chain(metrics, policy_result["policy_triggered"], ai_insight)
@@ -142,9 +149,13 @@ async def evaluate_sentinel(body: EvaluateRequest, request: Request) -> dict:
         patterns_out = []
         risk_pred_out = {"predicted_risk": "unknown", "confidence": 0.0, "reason": str(e)}
 
+    pii_flagged = any(
+        "pii" in t.lower() or "sensitive" in t.lower()
+        for t in policy_result["policy_triggered"]
+    )
     return {
         "id": str(uuid.uuid4()),
-        "fgs_score": round(fgs_result.score, 2),
+        "fgs_score": fgs_score_pct,
         "blast_radius": blast_radius,
         "change_magnitude": round(diff_result.magnitude, 2),
         "decision": final_policy_decision,
@@ -159,24 +170,15 @@ async def evaluate_sentinel(body: EvaluateRequest, request: Request) -> dict:
         "predicted_risk": risk_pred_out,
         "lineage_graph": {
             "nodes": [{"id": fqn, "name": fqn, "impact": 1.0}] + [
-                {"id": f"child_{i}", "name": f"downstream_{i}", "impact": 0.5} 
+                {"id": f"child_{i}", "name": f"downstream_{i}", "impact": 0.5}
                 for i in range(min(blast_radius, 5))
             ],
             "edges": [{"start": fqn, "end": f"child_{i}"} for i in range(min(blast_radius, 5))]
         },
         "risk": {
-            "security_integrity": 20.0,
-            "resource_collision": 60.0,
-            "orchestration_lag": 15.0
+            "security_integrity": min(100.0, round((1.0 - fgs_result.score) * 80 + (20.0 if pii_flagged else 0), 1)),
+            "resource_collision": min(100.0, round(blast_radius * 15.0, 1)),
+            "orchestration_lag": min(100.0, round(diff_result.magnitude * 100, 1)),
         },
-        "suggestions": [
-            {
-                "id": "opt_01",
-                "title": "Enable Partitioning",
-                "description": "Shard key optimization detected.",
-                "priority": "HIGH",
-                "estimated_impact": "+12.4% FGS"
-            }
-        ],
         "timestamp": datetime.utcnow().isoformat() + "Z"
     }

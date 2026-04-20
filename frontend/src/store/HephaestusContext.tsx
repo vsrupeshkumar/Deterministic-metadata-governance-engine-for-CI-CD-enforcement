@@ -26,9 +26,8 @@ export interface EvaluationResult {
   policy_decision?: string;
   policy_triggered?: string[];
   confidence_score?: number;  
-  suggestions_out?: { title: string; severity: string; action: string; expected_impact: string }[];
-  simulation_out?: { current_fgs: number; projected_fgs: number; delta: number; risk_reduction: string };
-  reasoning_chain_out?: string[];
+  simulation?: { current_fgs: number; projected_fgs: number; delta: number; risk_reduction: string };
+  reasoning_chain?: string[];
   historical_patterns?: { pattern: string; frequency: number; risk_level: string }[];
   predicted_risk?: { predicted_risk: string; confidence: number; reason: string };
 }
