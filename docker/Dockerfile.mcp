@@ -2,12 +2,13 @@ FROM python:3.11-slim
 
 WORKDIR /app
 COPY pyproject.toml .
+COPY README.md .
 COPY config/ config/
-COPY mcp/ mcp/
+COPY mcp_server/ mcp_server/
 
 RUN pip install --no-cache-dir -e .
 
 EXPOSE 8000
 
-CMD ["python", "-m", "mcp.server"]
+CMD ["python", "-m", "mcp_server.server"]
 
